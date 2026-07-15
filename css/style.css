@@ -1,0 +1,605 @@
+:root {
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --header-bg: rgba(26, 26, 26, 0.85);
+    --primary-color: #ffffff;
+    --text-color: #e0e0e0;
+    --text-muted: #b3b3b3;
+    --secondary-color: #7dfe7d; /* Verde claro de alto contraste */
+    --terciary-color: #6a5acd;  /* Slateblue */
+    --terciary-hover-color: #5544b5;
+    --border-color: #2c2c2c;
+    --link-hover-color: #a3ffa3;
+    
+    /* Botão Principal */
+    --btn-primary-text: #121212;
+    --btn-primary-hover-bg: #a3ffa3;
+    --btn-primary-shadow: rgba(125, 254, 125, 0.2);
+}
+
+.light-theme {
+    --background-color: #f7f9fc;
+    --card-background: #ffffff;
+    --header-bg: rgba(255, 255, 255, 0.85);
+    --primary-color: #1a1a1a;
+    --text-color: #334155; /* Cinza escuro de alta legibilidade */
+    --text-muted: #64748b;
+    --secondary-color: #1b7a2d; /* Verde escuro com contraste em fundo claro */
+    --terciary-color: #5544b5;  /* Slateblue ligeiramente mais escuro */
+    --terciary-hover-color: #3b2f8a;
+    --border-color: #e2e8f0;
+    --link-hover-color: #155d22;
+    
+    /* Botão Principal */
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover-bg: #155d22;
+    --btn-primary-shadow: rgba(27, 122, 45, 0.2);
+}
+
+/* Foco acessível */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeInPage 0.6s ease-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+}
+
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    list-style: none;
+}
+
+header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+    border-bottom-color: var(--terciary-color);
+}
+
+header nav a.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--terciary-color);
+    font-weight: 600;
+}
+
+/* Conteúdo Principal */
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+}
+
+h3 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-size: 1.2rem;
+    margin: 1.2rem 0 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+/* Links em geral */
+a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Índice e lista de projetos */
+.projects-index {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.projects-index ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projects-index a {
+    font-weight: 500;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--terciary-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h2 {
+    margin-top: 0;
+}
+
+.project-card ul {
+    margin: 0 0 1.2rem 1.5rem;
+    color: var(--text-color);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-links a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--terciary-color);
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.project-links a:hover {
+    background-color: var(--terciary-hover-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(106, 90, 205, 0.25);
+}
+
+/* Redes Sociais */
+.social-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.social-item {
+    background-color: var(--card-background);
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.social-item a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.social-item a:hover {
+    color: var(--link-hover-color);
+}
+
+.social-item-email {
+    border-left: 4px solid var(--terciary-color);
+}
+
+/* Tabela de Habilidades */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #1a1a1a;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--card-background);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Botão de Tema */
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--background-color);
+    transform: scale(1.1);
+}
+
+/* Estilo para ícones SVG */
+.icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: middle;
+    margin-right: 8px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+a:hover .icon {
+    transform: translateY(-2px);
+}
+
+/* Componente de Linha do Tempo (Timeline) */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: calc(-2rem + 1px);
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px var(--background-color), 0 0 0 5px var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.3);
+}
+
+.timeline-content {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.timeline-content h2 {
+    margin-top: 0;
+    color: var(--terciary-color);
+    font-size: 1.3rem;
+}
+
+.timeline-content h2 .icon,
+.skills-category h2 .icon {
+    color: var(--secondary-color);
+}
+
+/* Componente de Habilidades (Badges) */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills-category {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.skills-category h2 {
+    color: var(--terciary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.skills-list-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.skill-badge {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+}
+
+.skill-badge:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(125, 254, 125, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .skill-badge:hover {
+    background-color: rgba(27, 122, 45, 0.08);
+}
+
+/* Botões Call to Action (CTA) */
+.cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--terciary-color);
+    color: #ffffff !important;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: var(--terciary-hover-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.25), 0 0 8px rgba(125, 254, 125, 0.15);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--terciary-color);
+    color: var(--secondary-color) !important;
+    background-color: rgba(106, 90, 205, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Badges de Status do Projeto */
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-developed {
+    background-color: rgba(125, 254, 125, 0.15);
+    color: #7dfe7d;
+    border: 1px solid rgba(125, 254, 125, 0.3);
+}
+
+.light-theme .status-developed {
+    background-color: rgba(27, 122, 45, 0.15);
+    color: #1b7a2d;
+    border: 1px solid rgba(27, 122, 45, 0.25);
+}
+
+.status-development {
+    background-color: rgba(255, 165, 0, 0.15);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.light-theme .status-development {
+    background-color: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.status-planned {
+    background-color: rgba(106, 90, 205, 0.15);
+    color: #b0a3ff;
+    border: 1px solid rgba(106, 90, 205, 0.3);
+}
+
+.light-theme .status-planned {
+    background-color: rgba(85, 68, 181, 0.15);
+    color: #5544b5;
+    border: 1px solid rgba(85, 68, 181, 0.25);
+}
