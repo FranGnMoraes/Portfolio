@@ -32,10 +32,6 @@ Como alguém que transita entre o design e a tecnologia, busquei refletir essa s
 <table>
   <tr>
     <td align="center" width="110">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" height="40" alt="Figma" />
-      <br>Figma
-    </td>
-    <td align="center" width="110">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />
       <br>HTML5
     </td>
@@ -46,14 +42,6 @@ Como alguém que transita entre o design e a tecnologia, busquei refletir essa s
     <td align="center" width="110">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
       <br>JavaScript
-    </td>
-    <td align="center" width="110">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap" />
-      <br>Bootstrap
-    </td>
-    <td align="center" width="110">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" alt="Java" />
-      <br>Java
     </td>
   </tr>
 </table>
