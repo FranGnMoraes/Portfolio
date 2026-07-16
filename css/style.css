@@ -6,8 +6,8 @@
     --text-color: #e0e0e0;
     --text-muted: #b3b3b3;
     --secondary-color: #7dfe7d; /* Verde claro de alto contraste */
-    --terciary-color: #6a5acd;  /* Slateblue */
-    --terciary-hover-color: #5544b5;
+    --terciary-color: #b588ff;  /* Violeta claro vibrante (lindo contraste no escuro) */
+    --terciary-hover-color: #d2b3ff;
     --border-color: #2c2c2c;
     --link-hover-color: #a3ffa3;
     
@@ -25,8 +25,8 @@
     --text-color: #334155; /* Cinza escuro de alta legibilidade */
     --text-muted: #64748b;
     --secondary-color: #1b7a2d; /* Verde escuro com contraste em fundo claro */
-    --terciary-color: #5544b5;  /* Slateblue ligeiramente mais escuro */
-    --terciary-hover-color: #3b2f8a;
+    --terciary-color: #7c3aed;  /* Violeta rico vibrante */
+    --terciary-hover-color: #6d28d9;
     --border-color: #e2e8f0;
     --link-hover-color: #155d22;
     
@@ -394,7 +394,7 @@ a:hover {
     display: inline-block;
     padding: 0.6rem 1.2rem;
     background-color: var(--terciary-color);
-    color: #ffffff !important;
+    color: var(--btn-primary-text) !important;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
@@ -428,24 +428,47 @@ a:hover {
 
 .social-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(181, 136, 255, 0.25); /* Sombra violeta claro sutil no hover */
+    border-color: var(--terciary-color);
+}
+
+.light-theme .social-item:hover {
+    box-shadow: 0 4px 15px rgba(124, 92, 237, 0.15);
 }
 
 .social-item a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400; /* Peso menor para dar contraste com os títulos das redes */
     font-size: 1.05rem;
+    color: var(--terciary-color); /* Link em Violeta vibrante */
+    transition: color 0.2s ease;
 }
 
 .social-item a:hover {
-    color: var(--link-hover-color);
+    color: var(--terciary-hover-color);
+}
+
+.social-brand {
+    color: var(--secondary-color); /* Verde em cada tema */
+    font-weight: 700;
+}
+
+.social-item .icon {
+    color: var(--secondary-color); /* Ícone destacado em Verde */
+    margin-right: 12px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-item:hover .icon {
+    transform: scale(1.2) rotate(-5deg); /* Animação interativa no ícone */
 }
 
 .social-item-email {
-    border-left: 4px solid var(--terciary-color);
+    border-left: 4px solid var(--secondary-color); /* Detalhe em Verde para mesclar as cores */
 }
 
 /* Tabela de Habilidades */
@@ -671,7 +694,7 @@ a:hover .icon {
 
 .btn-primary {
     background-color: var(--terciary-color);
-    color: #ffffff !important;
+    color: var(--btn-primary-text) !important;
     border: 1px solid transparent;
 }
 
