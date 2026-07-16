@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html" aria-label="Página Inicial">
+        <a href="index.html" aria-label="Página Inicial" class="logo">
             <img src="img/foto-perfil.jpeg" 
                 alt="Foto de perfil: Francine G.N Moraes, uma menina de cabelo marsala sorrindo com um fundo violeta" 
                 width="70" 
@@ -20,7 +20,18 @@
             >
         </a>
         
-        <nav>
+        <div class="header-controls">
+            <button id="theme-toggle" aria-label="Alternar tema escuro/claro" class="theme-btn">🌓</button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </span>
+            </button>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
             <ul>
                 <li><a href="index.html">Sobre mim</a></li>
                 <li><a href="minha-trajetoria.html">Minha trajetória</a></li>
@@ -29,7 +40,6 @@
                 <li><a href="skills.html">Minhas habilidades</a></li>
             </ul> 
         </nav>
-        <button id="theme-toggle" aria-label="Alternar tema escuro/claro" class="theme-btn">🌓</button>
     </header>
 
     <main>
