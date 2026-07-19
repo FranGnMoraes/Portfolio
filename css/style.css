@@ -604,6 +604,10 @@ a:hover .icon {
     margin-bottom: 0;
 }
 
+.timeline-item:focus {
+    outline: none;
+}
+
 .timeline-marker {
     position: absolute;
     left: calc(-2rem + 1px);
@@ -613,11 +617,14 @@ a:hover .icon {
     border-radius: 50%;
     background-color: var(--secondary-color);
     box-shadow: 0 0 0 3px var(--background-color), 0 0 0 5px var(--secondary-color);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-item:hover .timeline-marker {
+.timeline-item:hover .timeline-marker,
+.timeline-item:focus-visible .timeline-marker {
     transform: scale(1.3);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px var(--background-color), 0 0 0 6px var(--secondary-color);
 }
 
 .timeline-content {
@@ -625,6 +632,13 @@ a:hover .icon {
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content,
+.timeline-item:focus-visible .timeline-content {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px var(--secondary-color), var(--btn-primary-shadow);
 }
 
 .timeline-content h2 {
