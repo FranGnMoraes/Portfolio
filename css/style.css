@@ -437,11 +437,10 @@ a:hover {
 }
 
 .social-item a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    gap: 0.75rem;
     text-decoration: none;
-    font-weight: 400; /* Peso menor para dar contraste com os títulos das redes */
-    font-size: 1.05rem;
     color: var(--terciary-color); /* Link em Violeta vibrante */
     transition: color 0.2s ease;
 }
@@ -450,14 +449,31 @@ a:hover {
     color: var(--terciary-hover-color);
 }
 
+.social-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 .social-brand {
     color: var(--secondary-color); /* Verde em cada tema */
     font-weight: 700;
+    white-space: nowrap;
+    font-style: bold;
+    font-size: 1.2rem;
+}
+
+.social-description {
+    color: var(--terciary-color);
+    font-style: italic;
+    line-height: 1.4;
+    display: inline;
+    font-weight: 200; /* Peso menor para dar contraste com os títulos das redes */
+    font-size: 0.8rem;
 }
 
 .social-item .icon {
     color: var(--secondary-color); /* Ícone destacado em Verde */
-    margin-right: 12px;
     width: 22px;
     height: 22px;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
