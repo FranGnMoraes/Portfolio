@@ -114,9 +114,9 @@ header img:hover {
 
 /* Controles do Cabeçalho (Tema e Hamburguer) */
 .header-controls {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 /* Botão do Menu Hamburguer */
@@ -235,7 +235,9 @@ header img:hover {
 @media (min-width: 768px) {
     header {
         flex-flow: row nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
         padding: 1rem 5%;
     }
 
@@ -256,6 +258,7 @@ header img:hover {
         margin-top: 0;
         padding-top: 0;
         border-top: none;
+        margin-left: auto;
     }
 
     .nav-menu ul {
