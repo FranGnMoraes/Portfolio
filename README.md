@@ -56,13 +56,15 @@ Alguns dos principais projetos detalhados no meu portfólio:
     *Foco em design responsivo com CSS Flexbox e HTML5/CSS3.* Apresentação de conteúdo claro e esteticamente delicado sobre os pequenos mamíferos hyraxes.
 2.  📅 **EvenTech (Página de Eventos)**  
     *Desenvolvido no programa Bolsa Futuro Digital.* Portal responsivo para visualização, pesquisa e inscrição em eventos tecnológicos.
-3.  🧮 **Calculadora em React**  
+3.  💻 **DevHub (Plataforma de Portfólio para Desenvolvedores)**  
+    *Plataforma web planejada para centralização de portfólios.* Integração dinâmica com a API do GitHub e customização de templates com design moderno e acessível.
+4.  🧮 **Calculadora em React**  
     *Desenvolvido durante o curso da Rocketseat.* Aplicação funcional utilizando conceitos avançados de React (Hooks, Context API, LocalStorage).
-4.  🌐 **Design de Interação (Consumo de APIs)**  
+5.  🌐 **Design de Interação (Consumo de APIs)**  
     *Estudo de interfaces dinâmicas.* Integração com serviços web, requisições assíncronas (`async/await`) e estados de carregamento amigáveis.
-5.  📰 **Editor de Manchetes de Jornal**  
+6.  📰 **Editor de Manchetes de Jornal**  
     *Aplicação WYSIWYG interativa.* Permite diagramar e personalizar seções de notícias em tempo real, usando estado centralizado com Vanilla JS e Tailwind CSS.
-6.  🔗 **DevLinks**  
+7.  🔗 **DevLinks**  
     *Agregador de links estilo Linktree.* Página responsiva baseada em Mobile-First com alternância de temas.
 
 ---

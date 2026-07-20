@@ -66,49 +66,65 @@
             <h2 class="section-title">Projetos</h2>
             <nav class="projects-index" aria-label="Índice de projetos">
                 <ul>
-                    <li><a href="#portal-do-hyrax">Portal do Hyrax</a></li>
+                    <li><a href="#devhub">DevHub - Plataforma de Portfólio</a></li>
                     <li><a href="#eventech">EvenTech - Página de Eventos</a></li>
                     <li><a href="#calculadora">Calculadora em React</a></li>
                     <li><a href="#design-interacao-api">Design de Interação (APIs)</a></li>
+                    <li><a href="#portal-do-hyrax">Portal do Hyrax</a></li>
                     <li><a href="#editor-manchetes">Editor de Manchetes</a></li>
                     <li><a href="#devlinks">DevLinks</a></li>
                 </ul>
             </nav>
 
             <div class="projects-list">
-                <article class="project-card" id="portal-do-hyrax">
+                <article class="project-card" id="devhub">
                     <h2>
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        Portal do Hyrax
-                        <span class="project-status status-developed">Desenvolvido</span>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        DevHub - Plataforma de Portfólio para Desenvolvedores
+                        <span class="project-status status-development">Em desenvolvimento</span>
                     </h2>
-                    <p>Projeto desenvolvido no âmbito da disciplina Design de Interfaces, com foco na construção de layouts responsivos utilizando CSS Flexbox.</p>
-                    <p>Este site tem como temática os hyraxes — pequenos mamíferos sociáveis e carismáticos — e busca, através de uma estrutura visual clara e delicada, apresentar conteúdo de forma acessível, funcional e esteticamente harmoniosa. 🖋️📐</p>                    
+                    <p><i>⚠️ Projeto acadêmico/fictício. O DevHub é um projeto de estudo que simula o desenvolvimento de um produto real para um cliente, cobrindo todo o ciclo de desenvolvimento full-stack, design system e documentação de requisitos.</i></p>
+                    <p>A plataforma web tem como objetivo permitir que estudantes e profissionais de tecnologia organizem e centralizem seus projetos, competências e dados profissionais em uma página pública otimizada para recrutadores e times técnicos. 💻🚀</p>
                     
                     <h3>
                         <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        Objetivos
-                     </h3>
+                        Stack Tecnológica
+                    </h3>
                     <ul>
-                        <li>Aplicar os princípios do design responsivo com Flexbox;</li>
-                        <li>Organizar conteúdos de forma coesa e hierárquica;</li>
-                        <li>Criar uma navegação intuitiva, utilizando apenas HTML5 e CSS3;</li>
-                        <li>Valorizar a estética com o uso de ícones, elements gráficos e composição visual.</li>
+                        <li><b>Back-end:</b> API REST em Laravel (PHP) com autenticação baseada em tokens (Laravel Sanctum);</li>
+                        <li><b>Front-end:</b> SPA em React + Tailwind CSS;</li>
+                        <li><b>Banco de Dados:</b> MySQL;</li>
+                        <li><b>Design & UX/UI:</b> Figma (Design system, identidade visual, wireframes e protótipos);</li>
+                        <li><b>Integrações Externas:</b> APIs do GitHub e ViaCEP.</li>
                     </ul>
 
                     <h3>
                         <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                        Estrutura
+                        Status & To-Do List do Projeto
                     </h3>
-                    <p>O portal é composto por seções bem definidas, com títulos visuais enriquecidos por ícones e elementos gráficos suaves, criando um equilíbrio entre funcionalidade e identidade visual.</p>
-                    <p><i>“Inspirado nos hyraxes: discretos, organizados e surpreendentes.” 🌿</i></p>
-                    
-                    <p><b>Função:</b> UX/UI Designer / Web Designer</p>
-                    <p><b>Ferramentas:</b> Figma, HTML, CSS (Flexbox), Bootstrap, JavaScript</p>
+                    <div class="project-todo-list">
+                        <p><b>✅ Concluído:</b></p>
+                        <ul>
+                            <li>Modelagem do banco de dados (tabelas <code>users</code>, <code>projetos</code>, <code>tecnologias</code>, <code>projeto_tecnologia</code>);</li>
+                            <li>Migrations de banco de dados criadas e executadas;</li>
+                            <li>Definição dos relacionamentos Eloquent nos Models;</li>
+                            <li>Configuração da autenticação por token com Laravel Sanctum;</li>
+                            <li>Elaboração do Documento de Requisitos (SRS) e do Documento de Design do Sistema.</li>
+                        </ul>
+                        <p><b>🔄 Em Andamento / Próximos Passos:</b></p>
+                        <ul>
+                            <li><b>Back-end:</b> Desenvolvimento dos controllers de autenticação (cadastro/login), CRUD de projetos com regras de autorização, e endpoints para busca, filtros e dashboard;</li>
+                            <li><b>UX/UI & Design Gráfico:</b> Criação de wireframes de baixa fidelidade das telas principais, protótipo navegável de alta fidelidade, identidade visual completa (logotipo, tipografia, paleta) e documentação do design system;</li>
+                            <li><b>Front-end:</b> Setup do React com Tailwind CSS, telas de autenticação e dashboard, integração com as APIs externas (GitHub e ViaCEP), página pública do portfólio, landing page e acessibilidade (WCAG AA).</li>
+                        </ul>
+                    </div>
+
+                    <p><b>Função:</b> Desenvolvedora Full-stack / UX/UI & Web Designer</p>
+                    <p><b>Estrutura do Repositório:</b> Organizado de forma mono-repositório com as pastas <code>backend/</code> (API Laravel) e <code>frontend/</code> (SPA React).</p>
 
                     <div class="project-links">
-                        <a href="https://frangnmoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/" target="_blank" rel="noopener noreferrer">Visualizar página web</a>
-                        <a href="https://github.com/FranGnMoraes/Portal-do-Hyrax---Design-Responsivo-com-Flexbox" target="_blank" rel="noopener noreferrer">Visualizar código</a>
+                        <a href="https://frangnmoraes.github.io/DevHub-Plataforma-de-Portfolio-para-Desenvolvedores/" target="_blank" rel="noopener noreferrer">Visualizar página web</a>
+                        <a href="https://github.com/FranGnMoraes/DevHub-Plataforma-de-Portfolio-para-Desenvolvedores" target="_blank" rel="noopener noreferrer">Visualizar código</a>
                     </div>
                 </article>
 
@@ -214,6 +230,42 @@
                     <div class="project-links">
                         <a href="https://frangnmoraes.github.io/trabalhoDesignInteracaoAPI/" target="_blank" rel="noopener noreferrer">Visualizar página web</a>
                         <a href="https://github.com/FranGnMoraes/trabalhoDesignInteracaoAPI" target="_blank" rel="noopener noreferrer">Visualizar código</a>
+                    </div>
+                </article>
+
+                <article class="project-card" id="portal-do-hyrax">
+                    <h2>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        Portal do Hyrax
+                        <span class="project-status status-developed">Desenvolvido</span>
+                    </h2>
+                    <p>Projeto desenvolvido no âmbito da disciplina Design de Interfaces, com foco na construção de layouts responsivos utilizando CSS Flexbox.</p>
+                    <p>Este site tem como temática os hyraxes — pequenos mamíferos sociáveis e carismáticos — e busca, através de uma estrutura visual clara e delicada, apresentar conteúdo de forma acessível, funcional e esteticamente harmoniosa. 🖋️📐</p>                    
+                    
+                    <h3>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Objetivos
+                     </h3>
+                    <ul>
+                        <li>Aplicar os princípios do design responsivo com Flexbox;</li>
+                        <li>Organizar conteúdos de forma coesa e hierárquica;</li>
+                        <li>Criar uma navegação intuitiva, utilizando apenas HTML5 e CSS3;</li>
+                        <li>Valorizar a estética com o uso de ícones, elements gráficos e composição visual.</li>
+                    </ul>
+
+                    <h3>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                        Estrutura
+                    </h3>
+                    <p>O portal é composto por seções bem definidas, com títulos visuais enriquecidos por ícones e elementos gráficos suaves, criando um equilíbrio entre funcionalidade e identidade visual.</p>
+                    <p><i>“Inspirado nos hyraxes: discretos, organizados e surpreendentes.” 🌿</i></p>
+                    
+                    <p><b>Função:</b> UX/UI Designer / Web Designer</p>
+                    <p><b>Ferramentas:</b> Figma, HTML, CSS (Flexbox), Bootstrap, JavaScript</p>
+
+                    <div class="project-links">
+                        <a href="https://frangnmoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/" target="_blank" rel="noopener noreferrer">Visualizar página web</a>
+                        <a href="https://github.com/FranGnMoraes/Portal-do-Hyrax---Design-Responsivo-com-Flexbox" target="_blank" rel="noopener noreferrer">Visualizar código</a>
                     </div>
                 </article>
 
